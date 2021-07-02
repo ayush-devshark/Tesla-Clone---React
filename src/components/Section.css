@@ -1,0 +1,13 @@
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/src/images/model-s.jpg');
+    background-repeat: no-repeat;
+}
+
+.itemText {
+    padding-top: 15vh;
+    text-align: center;
+}
