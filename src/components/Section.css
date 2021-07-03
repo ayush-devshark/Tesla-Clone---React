@@ -45,7 +45,7 @@
 
 @media (max-width: 768px) {
     .buttonGroup {
-        flex-direction: c;
+        flex-direction: column;
     }
 }
 
