@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
 import './Header.css';
 import CloseIcon from '@material-ui/icons/Close';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux';
 
 function Header() {
     const [menuNavStatus, setMenuNavStatus] = useState(false);
+    const cars = useSelector(selectCars);
+
     return (
         <div className='header'>
             <a href='#a'>
                 <img src='/images/logo.svg' alt='' />
             </a>
             <div className='menu'>
-                <a href='#'>Model S</a>
-                <a href='#'>Model Y</a>
-                <a href='#'>Model 3</a>
-                <a href='#'>Model X</a>
-                <a href='#'>Solar Roof</a>
-                <a href='#'>Solar Panels</a>
+                {cars &&
+                    cars.map((car, index) => (
+                        <a key={index} href='#'>
+                            {car}
+                        </a>
+                    ))}
             </div>
             <div className='rightMenu'>
                 <a href='#'>Shop</a>
@@ -36,12 +40,12 @@ function Header() {
                         setMenuNavStatus(false);
                     }}
                 />
-                <li>
-                    <a href='#'>Model S</a>
-                </li>
-                <li>
-                    <a href='#'>Model X</a>
-                </li>
+                {cars &&
+                    cars.map((car, index) => (
+                        <li key={index}>
+                            <a href='#'>{car}</a>
+                        </li>
+                    ))}
                 <li>
                     <a href='#'>Existing Inventory</a>
                 </li>
