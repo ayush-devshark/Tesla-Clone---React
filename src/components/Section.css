@@ -23,6 +23,15 @@
 .wrap.three {
     background-image: url('../model-3.jpg');
 }
+.wrap.solar {
+    background-image: url('../solar-panel.jpg');
+}
+.wrap.roof {
+    background-image: url('../solar-roof.jpg');
+}
+.wrap.accessories {
+    background-image: url('../accessories.jpg');
+}
 
 .itemText {
     padding-top: 15vh;

@@ -11,7 +11,9 @@ function Section(props) {
             <div className='buttons'>
                 <div className='buttonGroup'>
                     <div className='button'>{props.leftBtnText}</div>
-                    <div className='button right'>{props.rightBtnText}</div>
+                    {props.rightBtnText && (
+                        <div className='button right'>{props.rightBtnText}</div>
+                    )}
                 </div>
                 <img
                     src='/images/down-arrow.svg'
